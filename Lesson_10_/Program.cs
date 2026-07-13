@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-// --- ЗАДАНИЕ 1 ---
+//1
 
 class Device
 {
@@ -84,7 +84,7 @@ class Car : Device
     }
 }
 
-// --- ЗАДАНИЕ 2 ---
+//2 
 
 class MusicalInstrument
 {
@@ -150,7 +150,7 @@ class Violin : MusicalInstrument
     }
 }
 
-// --- ЗАДАНИЕ 3 ---
+//3
 
 abstract class Worker
 {
@@ -185,14 +185,14 @@ class President : Worker
     }
 }
 
-// --- MAIN (Точка входа) ---
+//main
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Выводы для задания 1
-        Console.WriteLine("--- TASK 1 ---");
+        
+        Console.WriteLine("1");
         List<Device> devices = new List<Device>();
         devices.Add(new Kettle("AquaBoil 3000", "Philips", 2, 2200));
         devices.Add(new Car("Model S", "Tesla", 250, "Electric"));
@@ -205,8 +205,8 @@ class Program
             Console.WriteLine();
         }
 
-        // Выводы для задания 2
-        Console.WriteLine("--- TASK 2 ---");
+        
+        Console.WriteLine("2");
         List<MusicalInstrument> instruments = new List<MusicalInstrument>();
         instruments.Add(new Violin("Classic Violin", "Italy", 4, "Bowed"));
 
@@ -219,8 +219,8 @@ class Program
             Console.WriteLine();
         }
 
-        // Выводы для задания 3
-        Console.WriteLine("--- TASK 3 ---");
+        
+        Console.WriteLine("3");
         List<Worker> workers = new List<Worker>();
         workers.Add(new President("Ilham Aliyev", 52, 15000, "SOCAR"));
 
