@@ -1,4 +1,43 @@
-//1
+// Main 
+
+Device[] devices = new Device[]
+{
+    new Kettle("AquaBoil 3000", "Philips", 2, 2200),
+    new Car("Model S", "Tesla", 250, "Electric")
+};
+
+for (int i = 0; i < devices.Length; i++)
+{
+    devices[i].Show();
+    devices[i].Desc();
+    devices[i].Sound();
+    Console.WriteLine();
+}
+
+MusicalInstrument[] instruments = new MusicalInstrument[]
+{
+    new Violin("Classic Violin", "Italy", 4, "Bowed")
+};
+
+for (int i = 0; i < instruments.Length; i++)
+{
+    instruments[i].Show();
+    instruments[i].Desc();
+    instruments[i].Sound();
+    instruments[i].History();
+    Console.WriteLine();
+}
+
+Worker[] workers = new Worker[]
+{
+    new President("Ilham Aliyev", 52, 15000, "SOCAR")
+};
+
+for (int i = 0; i < workers.Length; i++)
+{
+    workers[i].Print();
+    Console.WriteLine();
+}
 
 class Device
 {
@@ -81,8 +120,6 @@ class Car : Device
     }
 }
 
-//2 
-
 class MusicalInstrument
 {
     public string Name { get; set; }
@@ -147,8 +184,6 @@ class Violin : MusicalInstrument
     }
 }
 
-//3
-
 abstract class Worker
 {
     public string Name { get; set; }
@@ -179,52 +214,5 @@ class President : Worker
         Console.WriteLine($"Position: President");
         Console.WriteLine($"Name: {Name}, Age: {Age}");
         Console.WriteLine($"Company: {Company}, Salary: ${Salary}");
-    }
-}
-
-//main
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        
-        Console.WriteLine("1");
-        List<Device> devices = new List<Device>();
-        devices.Add(new Kettle("AquaBoil 3000", "Philips", 2, 2200));
-        devices.Add(new Car("Model S", "Tesla", 250, "Electric"));
-
-        for (int i = 0; i < devices.Count; i++)
-        {
-            devices[i].Show();
-            devices[i].Desc();
-            devices[i].Sound();
-            Console.WriteLine();
-        }
-
-        
-        Console.WriteLine("2");
-        List<MusicalInstrument> instruments = new List<MusicalInstrument>();
-        instruments.Add(new Violin("Classic Violin", "Italy", 4, "Bowed"));
-
-        for (int i = 0; i < instruments.Count; i++)
-        {
-            instruments[i].Show();
-            instruments[i].Desc();
-            instruments[i].Sound();
-            instruments[i].History();
-            Console.WriteLine();
-        }
-
-        
-        Console.WriteLine("3");
-        List<Worker> workers = new List<Worker>();
-        workers.Add(new President("Ilham Aliyev", 52, 15000, "SOCAR"));
-
-        for (int i = 0; i < workers.Count; i++)
-        {
-            workers[i].Print();
-            Console.WriteLine();
-        }
     }
 }
